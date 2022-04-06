@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water bucket</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <main>
+        <section class="content">
+            <h1>Water Jug Challenge</h1>
+            <div class="contForm">
+                <div class="inputs">
+                    <label>Enter first quantity</label>
+                    <input id="valueX" name="valueX" onkeyUp="return valNumber(this)"></input>
+                    <label for="">enter second quantity</label>
+                    <input id="valueY" class="valueY" onkeyUp="return valNumber(this)">
+                    <label>enter quantity to measure</label>
+                    <input id="valueZ" class="valueZ" type="text" onkeyUp="return valNumber(this)">
+                    <p><i class="message red"></i></p>
+                </div>
+                <div>
+                    <button class="btn" onclick="puzzle()">CONSULT</button>
+                </div>
+            </div>
+
+            <div class="result">
+                <p class="textResult"></p>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/main.js"></script>
+
+
+    <script src="js/validationNumbers.js"></script>
+
+
+</body>
+
+</html>

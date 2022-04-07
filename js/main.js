@@ -16,25 +16,16 @@ const puzzle = () => {
         document.querySelector(".textResult").innerHTML = " ";
     } else {
         document.querySelector(".message").innerHTML = " ";
-        if (vZ > sum) {
-            document.querySelector(".textResult").innerHTML = `NO Solution`;
-        } else {
-            document.querySelector(".textResult").innerHTML = `The riddle does have a solution`;
-        }
-        if (vX === 0) {
-            if (vY > vZ) {
-                document.querySelector(".textResult").innerHTML = `The riddle does have a solution`;
-            } else {
-                document.querySelector(".textResult").innerHTML = `NO Solution`;
-            }
-            if ((vY === 0)) {
-                if (vX > vZ) {
-                    document.querySelector(".textResult").innerHTML = `The riddle does have a solution`;
-                } else {
-                    document.querySelector(".textResult").innerHTML = `NO Solution`;
-                }
-            }
-        }
-    }
 
+        if(vZ <= 0)return document.querySelector(".textResult").innerHTML = `NO Solution`;
+
+        if (vZ > sum) return document.querySelector(".textResult").innerHTML = `NO Solution`;
+            
+        if ((vX === 0) && (vY <= vZ))  return document.querySelector(".textResult").innerHTML = `NO Solution`;
+        
+        if ((vY === 0) && (vX <= vZ)) return document.querySelector(".textResult").innerHTML = `NO Solution`;
+            
+        else document.querySelector(".textResult").innerHTML = `The riddle does have a solution`;
+     
+    }
 }
